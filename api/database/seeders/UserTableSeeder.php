@@ -20,7 +20,7 @@ class UserTableSeeder extends Seeder
         DB::table('users')->insert([
             'slug' => Str::slug(Str::random(20)),
             'name' => "MrGentil",
-            'email' => "tshitshob@gmail.com",
+            'email' => "bedi-tshitsho@outlook.fr",
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'is_admin' => true,
             'image'=>'default.png',
