@@ -151,10 +151,10 @@ class AuthController extends Controller
                     'token'=>$token,
                     'created_at'=>now()
                 ]);
-                return $this->apiResponse('Password reset link has been sent to your email address',null,Response::HTTP_OK,true);
+                return $this->apiResponse('Le lien de réinitialisation du mot de passe a été envoyé à votre adresse électronique.',null,Response::HTTP_OK,true);
             }
         } else {
-            return $this->apiResponse('invalid email',null,Response::HTTP_OK,true);
+            return $this->apiResponse('email non valide',null,Response::HTTP_OK,true);
         }
 
     }
