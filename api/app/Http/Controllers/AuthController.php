@@ -121,7 +121,7 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function userProfile() {
-        return $this->apiResponse('Sign out success',$data=auth()->user(),Response::HTTP_OK,true);
+        return $this->apiResponse('Déconnexion réussie',$data=auth()->user(),Response::HTTP_OK,true);
     }
 
     /**
@@ -159,7 +159,6 @@ class AuthController extends Controller
 
     }
 
-
     public function updatePassword(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -174,14 +173,14 @@ class AuthController extends Controller
         $email = Crypt::decryptString($request->email);
         $user = DB::table('password_resets')->where([['email',$email],['token',$request->token]])->first();
         if(!$user){
-            return $this->apiResponse('Invalid email address or token',null,Response::HTTP_OK,true);
+            return $this->apiResponse('Adresse électronique ou jeton invalide',null,Response::HTTP_OK,true);
         }else{
             $data = User::where('email',$email)->first();
             $data->update([
                 'password'=> Hash::make($request->password)
             ]);
             DB::table('password_resets')->where('email',$email)->delete();
-            return $this->apiResponse('Password updated !',null,Response::HTTP_OK,true);
+            return $this->apiResponse('Mot de passe mis à jour !',null,Response::HTTP_OK,true);
         }
     }
 }
