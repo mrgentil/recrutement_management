@@ -1,12 +1,17 @@
 import React from "react";
+import Nav from "./Nav";
+import Hero from "./Hero";
 
 
 const Header = () => {
 
     return (
-        <div>
-            <h1>Header</h1>
-        </div>
+        <header className="home-header">
+            <div className="home-header-container">
+              <Nav/>
+                <Hero/>
+            </div>
+        </header>
     );
 };
 
