@@ -8,10 +8,8 @@ const Hero = () => {
                 <h1>Trouver l'emploi</h1>
                 <h1>Cela correspond à votre vie</h1>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-                    praesentium veniam voluptatum reiciendis consequatur iusto,
-                    repudiandae aut, fuga, cupiditate similique enim est reprehenderit
-                    maiores distinctio?
+                    Une équipe de développement de logiciels de premier ordre qui aide les propriétaires et les décideurs
+                    à mettre en œuvre des initiatives numériques pour obtenir un succès financier durable.
                 </p>
                 <div className="home-header-container-hero__left-search">
                     <input
