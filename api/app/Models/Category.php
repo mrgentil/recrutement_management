@@ -11,10 +11,10 @@ class Category extends Model
 
     protected $fillable = ['name','slug','icon','status','job_count','period_start','period_end'];
 
-    /*public function jobs()
+    public function jobs()
     {
         return $this->belongsToMany('App\Models\MainJob')->withTimestamps();
-    }*/
+    }
 }
 
 
