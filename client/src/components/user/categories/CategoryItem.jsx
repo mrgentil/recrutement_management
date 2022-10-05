@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import catIcon from '../../../assets/images/default.png';
 
 const CategoryItem = ({ name, icon, count, slug }) => {
     return (
