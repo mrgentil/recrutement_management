@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +22,9 @@ use Illuminate\Support\Facades\Route;
         //home
 
     });
+
+Route::group(['middleware' => 'api'], function ($router) {
+    Route::resource('/categories', CategoryController::class);
+   // Route::resource('/applications', ApplicationController::class);
+});
 
