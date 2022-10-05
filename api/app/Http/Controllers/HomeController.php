@@ -14,11 +14,11 @@ class HomeController extends Controller
     public function index()
     {
         $data['categories'] = Category::where([['status','active']])->take(8)->get();
-      /*  $data['featured_job'] = MainJob::where([['status','active'],['is_featured',true]])->get()->random(6);
-        $data['latest'] = MainJob::where('status','active')->latest('created_at')->get()->random(6);*/
+       $data['featured_job'] = MainJob::where([['status','active'],['is_featured',true]])->get()->random(6);
+        $data['latest'] = MainJob::where('status','active')->latest('created_at')->get()->random(6);
         return $this->apiResponse('success',$data,Response::HTTP_OK,true);
     }
-    /*public function getALlJobs()
+    public function getALlJobs()
     {
         $data['job'] = MainJob::where([['status','active']])->get();
         return $this->apiResponse('success',$data,Response::HTTP_OK,true);
@@ -29,5 +29,5 @@ class HomeController extends Controller
         $data['job'] = MainJob::where([['slug',$slug]])->with('category')->first();
         $data['similar'] = MainJob::where([['status','active'],['cat_id',$data['job']->cat_id]])->get()->random(3);
         return $this->apiResponse('success',$data,Response::HTTP_OK,true);
-    }*/
+    }
 }

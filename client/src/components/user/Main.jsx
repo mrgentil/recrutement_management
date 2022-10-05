@@ -32,7 +32,7 @@ const Main = () => {
                 <>
                     <Header cmp="home" />
                     <Category categories={data.categories} />
-                    <FeaturedJob  />
+                    <FeaturedJob featured={data.featured_job} />
                     <Jobs latest={data.latest} />
                     <Footer />
                 </>

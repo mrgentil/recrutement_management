@@ -14,9 +14,9 @@ const JobItem = ({ title, slug, type, company, icon }) => {
                     <p>{company}</p>
                     <Link
                         className={type === "full time" ? "full-time" : "half-time"}
-                        to="#"
+                        to={`/job-details/${slug}`}
                     >
-                        {type}
+                        {type}E
                     </Link>
                 </div>
                 <div className="job__wrapper__card--right__part-2">
